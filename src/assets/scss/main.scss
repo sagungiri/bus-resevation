@@ -1,0 +1,14 @@
+@import './variables.scss';
+@import './utils.scss';
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  color: $font-color-1;
+  background-color: $color-bg-default;
+  height: 100%;
+  width: 100%;
+}
+.content {
+  height: 100%;
+  width: 100%;
+}
