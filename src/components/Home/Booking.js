@@ -8,7 +8,7 @@ function Booking() {
       <div className="bookings">
         <div className="bookings-section">
           <div className="round-border orange-border flex-center center">
-            <i class="fas fa-search-location"></i>
+            <i className="fas fa-search-location"></i>
           </div>
           <div className="bookings-step">
             1. Choose your trip
@@ -16,7 +16,7 @@ function Booking() {
         </div>
         <div className="bookings-section">
           <div className="round-border orange-border flex-center center">
-            <i class="fab fa-wpforms"></i>
+            <i className="fab fa-wpforms"></i>
           </div>
           <div className="bookings-step">
             2.  Fill up your details
@@ -24,7 +24,7 @@ function Booking() {
         </div>
         <div className="bookings-section">
           <div className="round-border orange-border flex-center center">
-            <i class="fas fa-money-check-alt"></i>
+            <i className="fas fa-money-check-alt"></i>
           </div>
           <div className="bookings-step">
             3. Confirm your payment
@@ -32,7 +32,7 @@ function Booking() {
         </div>
       </div>
     </Fragment>
-      )
+  )
 }
 
 export default Booking;

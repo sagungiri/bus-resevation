@@ -9,22 +9,22 @@ function Navbar({ routes }) {
   console.log(routes, 'ROUTES')
   return (
     <div className=
-    "navbar">
+      "navbar">
       <div className="navbar-content">
         <div className="logo">
-          <img src={logo}></img>
+          <img src={logo} alt=''></img>
         </div>
         <ul>
           {
             routes.map(({ path, name }) => (
               <li key={uuidv4()}>
-                <Link to={path}>{ name }</Link>
+                <Link to={path}>{name}</Link>
               </li>
             ))
           }
         </ul>
       </div>
-      
+
     </div>
   )
 }

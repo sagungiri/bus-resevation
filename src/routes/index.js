@@ -1,10 +1,9 @@
-import React, { UseState, Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
+//import PropTypes from 'prop-types';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
 } from 'react-router-dom';
 import uuidv4 from 'uuid/v4';
 
@@ -17,11 +16,11 @@ import Admin from '../pages/Admin';
 
 const publicRoutes = [
   { path: '/', component: Home, name: 'Home' },
-  { path: '/login', component: Login, name: 'Login'},
+  { path: '/login', component: Login, name: 'Login' },
 ]
 const privateRoutes = [
   { path: '/account', component: Account, name: 'Account' },
-  { path: '/admin', component: Admin, name: 'Admin'}
+  { path: '/admin', component: Admin, name: 'Admin' }
 ]
 
 function PageRouter() {
@@ -32,16 +31,16 @@ function PageRouter() {
         <div className="content">
           <Switch>
             {
-              publicRoutes.map(({path, component}) => (
-                <Route key={uuidv4()} path={path} component={component} exact/>
+              publicRoutes.map(({ path, component }) => (
+                <Route key={uuidv4()} path={path} component={component} exact />
               ))
             }
             {
-              privateRoutes.map(({path, component}) => (
+              privateRoutes.map(({ path, component }) => (
                 <PrivateRoute key={uuidv4()} path={path} component={component} exact />
               ))
             }
-            </Switch>
+          </Switch>
         </div>
       </Fragment>
     </Router>

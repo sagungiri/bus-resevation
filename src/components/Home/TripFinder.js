@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/scss/components/tripfinder.scss';
 
-function TripFinder() {
+const TripFinder = () => {
   return (
     <div className="trip-finder">
       <div className="trip-finder-content">
@@ -9,16 +9,16 @@ function TripFinder() {
         <div className="trip-finder-subheader">Your real-time bus booking in the Nepal</div>
         <div className="trip-finder-form">
           <div className="input-wrapper">
-            <span><i class="fas fa-search"></i></span>
+            <span><i className="fas fa-search"></i></span>
             <input className="full-width" placeholder="Search for trips"></input>
           </div>
           <div className="input-wrapper">
-            <span><i class="fas fa-calendar-alt"></i></span>
+            <span><i className="fas fa-calendar-alt"></i></span>
             <input className="full-width" placeholder="Departure Date"></input>
           </div>
           <div className="flex">
             <div className="input-wrapper">
-              <span><i class="fas fa-user-friends"></i></span>
+              <span><i className="fas fa-user-friends"></i></span>
               <input className="full-width" placeholder="Passengers"></input>
             </div>
             <button>Search</button>

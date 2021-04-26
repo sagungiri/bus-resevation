@@ -1,9 +1,9 @@
 import React, { Fragment, useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import {AuthContext} from '../context/Auth'
+import { AuthContext } from '../context/Auth'
 
 function Login(props) {
-  const [ redirectToReferrer, setRedirectToReferrer ] = useState(false)
+  const [redirectToReferrer, setRedirectToReferrer] = useState(false)
   const { authState, dispatch } = useContext(AuthContext)
   const { isAuthenticated } = authState;
   let { from } = props.location.state || { from: { pathname: "/" } };
@@ -20,10 +20,13 @@ function Login(props) {
   }
 
   const renderButton = () => {
-    if (isAuthenticated) return (
-      <button onClick={() => login() }>Logout</button>
-    )
-    return (<button onClick={() => login() }>Login</button>)
+    if (isAuthenticated) {
+      return (
+        <button onClick={() => logout()}>Logout</button>
+      )
+    }
+    return (<button onClick={() => login()}>Login</button>)
+
   }
   if (redirectToReferrer) return (
     <Redirect to={from} />
@@ -31,7 +34,7 @@ function Login(props) {
   return (
     <Fragment>
       <div>Login Page</div>
-      { renderButton() }
+      { renderButton()}
     </Fragment>
   )
 }
